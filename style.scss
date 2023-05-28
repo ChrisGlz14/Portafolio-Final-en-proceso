@@ -17,7 +17,9 @@ $sombraLight: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 
 body {
-  background-color: #f1f1f1;
+  background-image:url(img/scattered-forcefields\ \(3\).svg);
+  background-repeat: no-repeat;
+  background-size:cover;
   font-family: "Poppins", sans-serif;
   transition: 0.3s ease all;
 
@@ -25,3 +27,62 @@ body {
     background: #1f1d2b;
   }
 }
+
+.presentation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+
+  .presentation-span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #903ae4;
+  }
+
+  h1 {
+    font-size: 55px;
+    color: #fff;
+  }
+
+  .presentation-paragraph {
+    font-weight: 600;
+    color: #4b5662;
+    max-width: 507px;
+  }
+
+  .container-btn {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px; 
+    
+    :nth-child(1) {
+      padding: 14px;
+      border-radius: 5px;
+      border: none;
+      background-color: #903ae4;
+      color: #ffffff;
+      font-size: 17px;                 
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    :nth-child(2) {
+      padding: 14px;
+      border-radius: 5px;
+      border: 1px solid #903ae4;
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 17px;                 
+      cursor: pointer;
+      transition: all 0.3s;
+
+     &:hover {
+        background-color: #903ae4;
+      }
+      }
+    }
+  }
+
