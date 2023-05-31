@@ -1,14 +1,57 @@
 // Variables
-$negro: #111111;
-$blanco: #fefefe;
-$grisOscuro: #222222;
-$grisClaro: #c8c8c8;
-$grisClaroHover: #acabab;
-$azul: #3e60e9;
-$azulHover: #254be6;
+$body-font: 'Poppins', sans-serif;
 
-$sombraDark: 10px 10px 20px rgba(170, 170, 170, 0.16);
-$sombraLight: 10px 10px 20px rgba(0, 0, 0, 0.16);
+/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+$big-font-size: 2rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.125rem;
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+$smaller-font-size: .75rem;
+
+/* Font weight */
+$font-medium: 500;
+$font-semi-bold: 600;
+
+/* Margenes Bottom */
+/* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+$mb-0-25: .25rem;
+$mb-0-5: .5rem;
+$mb-0-75: .75rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+$mb-2-5: 2.5rem;
+$mb-3: 3rem;
+
+/* z-index */
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    $big-font-size: 3rem;
+    $h1-font-size: 2.25rem;
+    $h2-font-size: 1.5rem;
+    $h3-font-size: 1.25rem;
+    $normal-font-size: 1rem;
+    $small-font-size: .875rem;
+    $smaller-font-size: .813rem;
+  }
+}
+
+
+/* Colores */
+$first-color:#903ae4;
+$second-color:#4b5662;
+
+
+/* Variables Dark theme */
+
+
 
 * {
   box-sizing: border-box;
@@ -17,41 +60,63 @@ $sombraLight: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 
 body {
-  background-image:url(img/scattered-forcefields\ \(3\).svg);
-  background-repeat: no-repeat;
-  background-size:cover;
-  font-family: "Poppins", sans-serif;
+  font-family: $body-font;
   transition: 0.3s ease all;
-
+  
+  /* Estilos modo oscuro*/
   &.dark {
     background: #1f1d2b;
+    background-image:url(img/scattered-forcefields\ \(3\).svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    
+    .portfolio-name h1 {
+      color: #ffffff;
+    }
+    
+    .container-btn { 
+      :nth-child(2) {
+       color: #ffffff;
+        }
+      }
   }
 }
 
-.presentation-container {
+.portfolio-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 1000px;
+  justify-content: flex-start;
+  align-content: center;
   height: 100vh;
-  margin: 0 auto;
+}
 
-  .presentation-span {
+.flex-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  
+
+  .container-presentation span{
     font-size: 20px;
     font-weight: 600;
     color: #903ae4;
   }
 
-  h1 {
-    font-size: 55px;
-    color: #fff;
+  .portfolio-name {
+    font-size: 28px;
   }
 
   .presentation-paragraph {
+    font-size: 17px;
+    color: #676a6e;
     font-weight: 600;
-    color: #4b5662;
-    max-width: 507px;
+    margin-right: 40px;
   }
 
   .container-btn {
@@ -59,7 +124,8 @@ body {
     flex-direction: row;
     margin-top: 10px; 
     
-    :nth-child(1) {
+    /* Estilos para el primer botón */
+    :first-child {
       padding: 14px;
       border-radius: 5px;
       border: none;
@@ -69,12 +135,14 @@ body {
       margin-right: 8px;
       cursor: pointer;
     }
-    :nth-child(2) {
+
+    /* Estilos para el segundo botón */
+    :last-child {
       padding: 14px;
       border-radius: 5px;
       border: 1px solid #903ae4;
       background-color: transparent;
-      color: #ffffff;
+      color: #000000;
       font-size: 17px;                 
       cursor: pointer;
       transition: all 0.3s;
@@ -84,5 +152,50 @@ body {
       }
       }
     }
+}
+
+// Imagen
+.portfolio-img {
+  margin-left: 20px;
+
+  img {
+  max-height: 200px;
+  border: solid $first-color 3px;
+  border-radius: 50%;
+  }
+}
+
+
+
+  /*Responsive Desing nueva sintaxis mediaquerys*/
+  @media(max-width:560px){
+    .portfolio-container,.flex-container {
+      flex-direction: column;
+      row-gap: 40px;
+      margin: 20px 0;
+    }
+
+    .portfolio-img {
+      justify-content: center;
+
+    }
+
+    h1 {
+      text-align: center;
+    }
+    
+    .container-presentation {
+      text-align: center;
+    }
+
+    .presentation-paragraph {
+      text-align: center; 
+      margin: 40px;
+    }
+
+    .container-btn {
+      justify-content: center;
+    }
+    
   }
 
