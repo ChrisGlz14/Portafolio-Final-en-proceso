@@ -1,0 +1,73 @@
+/* Colores */
+.container {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 60%;
+  justify-content: center;
+  height: auto;
+  border-radius: 8px;
+  background: transparent;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+img {
+  flex: 0 0 auto;
+  margin: 0 auto;
+  height: 202px;
+  width: 373px;
+  border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75) inset;
+}
+
+.container-card {
+  flex: 0 0 80%;
+  margin-left: 50px;
+}
+@media screen and (max-width: 1000px) {
+  .container-card {
+    margin: 0 40px;
+  }
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.icons {
+  font-size: 28px;
+  cursor: pointer;
+}
+.icons i {
+  transition: all 0.1s;
+  margin: 8px;
+  color: #903ae4;
+}
+.icons :hover {
+  color: rgba(168, 104, 231, 0.7411764706);
+}
+
+.footer-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.footer-icons {
+  font-size: 28px;
+}
+.footer-icons i {
+  margin: 8px;
+}/*# sourceMappingURL=card.css.map */

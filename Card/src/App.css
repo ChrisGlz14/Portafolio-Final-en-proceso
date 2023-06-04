@@ -1,0 +1,17 @@
+.container-flex {
+  display: flex;
+  gap: 45px;
+  flex-wrap: wrap;
+
+}
+@media screen and (max-width:1000px) {
+  .container-flex {
+    display: inline;
+  }
+}
+
+h1 {
+  display: block;
+  font-size: 50px;
+  text-align: center;
+}
