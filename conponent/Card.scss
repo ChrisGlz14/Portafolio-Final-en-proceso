@@ -28,8 +28,19 @@ img {
     width: 373px;
     border-radius: 6px;
     object-fit: cover;
-    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.75) inset;
+    box-shadow: 0px 0px 55px 0px rgba(0,0,0,1) inset;
+
 }
+
+// .shadow {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 6px;
+//     box-shadow: inset 0px 0px 55px 0px rgba(0, 0, 0, 0.75);
+// }
 
 .container-card {
     flex: 0 0 80%;
