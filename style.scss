@@ -1,5 +1,15 @@
 // Variables
 $body-font: 'Poppins', sans-serif;
+$negro: #111111;
+$blanco: #fefefe;
+$grisOscuro: #222222;
+$grisClaro: #c8c8c8;
+$grisClaroHover: #acabab;
+$azul: #3e60e9;
+$azulHover: #254be6;
+
+$sombraDark: 10px 10px 20px rgba(170, 170, 170, 0.16);
+$sombraLight: 10px 10px 20px rgba(0, 0, 0, 0.16);
 
 /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
 $big-font-size: 2rem;
@@ -43,15 +53,11 @@ $z-modal: 1000;
   }
 }
 
-
 /* Colores */
-$first-color:#903ae4;
-$second-color:#4b5662;
-
+$first-color: #903ae4;
+$second-color: #4b5662;
 
 /* Variables Dark theme */
-
-
 
 * {
   box-sizing: border-box;
@@ -62,26 +68,183 @@ $second-color:#4b5662;
 body {
   font-family: $body-font;
   transition: 0.3s ease all;
+  background-image: url(img/scattered-forcefields\ \(white\).svg);
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease all;
   
-  /* Estilos modo oscuro*/
+  /* Estilos modo oscuro */
   &.dark {
     background: #1f1d2b;
-    background-image:url(img/scattered-forcefields\ \(3\).svg);
+    background-image: url(img/scattered-forcefields\ \(6\).svg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
+  }
 
-    
-    .portfolio-name h1 {
-      color: #ffffff;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #233432;
+    background: linear-gradient(90deg, rgb(66, 2, 82) 0%, rgb(1, 7, 39) 100%);
+    height: 90px;
+
+    #btnMobile {
+      display: none;
+      height: 0;
+      width: 0;
+      margin-top: 10px;
+      padding: 0;
+      border: none;
+      background: none;
     }
-    
-    .container-btn { 
-      :nth-child(2) {
-       color: #ffffff;
+
+    @media screen and (max-width: 560px) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: #233432;
+      background: linear-gradient(90deg, rgb(66, 2, 82) 0%, rgb(1, 7, 39) 100%);
+
+      #btnMobile {
+        display: flex;
+        position: absolute;
+        left: 30px;
+        top: 35px;
+        flex-direction: column;
+        width: 35px;
+        height: 35px;
+        border: 0;
+        background: transparent;
+        gap: 10px;
+
+        body.dark & {
+          filter: invert(100%);
         }
       }
+    }
+    #btnMobile div {
+      background-color: #f1f1f1;
+      height: 2px;
+      width: 100%;
+      border-radius: 5px;
+      transition: all 0.5s;
+      transform-origin: left;
+    }
+    #btnMobile:hover div:first-child {
+      transform: rotate(44deg);
+    }
+    #btnMobile:hover div:nth-child(2) {
+      opacity: 0;
+    }
+    #btnMobile:hover div:last-child {
+      transform: rotate(-44deg);
+    }
+    body.dark & {
+      background: linear-gradient(90deg, rgb(180, 105, 199) 0%, rgb(178, 178, 240) 100%);
+    }
+
+    nav {
+      margin: 10px;
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        @media screen and (max-width: 560px) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .logo {
+          height: 100px;
+          width: 100px;
+          filter: invert(100%);
+          body.dark & {
+            filter: brightness(0%);
+          }
+        }
+        a {
+          text-decoration: none;
+          color: #ffffff;
+          font-weight: 400;
+          margin: 15px;
+          &:hover {
+            transition: all 0.3s;
+            color: #2599e6;
+          }
+          body.dark & {
+            color: #1f1d2b;
+            font-weight: 700;
+            &:hover {
+              transition: all 0.3s;
+              color: #065e91;
+            }
+          }
+        }
+      }
+    }
+
+    // Switch of dark and light mode
+    .switch {
+      background-color: #343d5b;
+      width: 50px;
+      height: 24px;
+      border-radius: 1000px;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      outline: none;
+      @media screen and (max-width: 560px) {
+        position: absolute;
+        right: 25px;
+        top: 44px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background-color: #f1f1f1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: 0.3s ease all;
+        box-shadow: 0px 0px 2px 2px rgb(0, 0, 0, 0.2);
+      }
+      &.active {
+        background-color: rgb(250, 158, 19);
+        &::after {
+          right: 0;
+          left: unset;
+        }
+      }
+      span {
+        font-size: 17px;
+        width: 30px;
+        height: 30px;
+        line-height: 26px;
+        display: block;
+        background: none;
+        color: #fff;
+      }
+    }
+
+    .portfolio-name h1 {
+      color: #000000;
+    } 
+
+    .container-btn { 
+      :nth-child(2) {
+        color: #ffffff;
+      }
+    }
   }
 }
+
+
 
 .portfolio-container {
   display: flex;
@@ -110,6 +273,13 @@ body {
 
   .portfolio-name {
     font-size: 28px;
+  }
+
+  .portfolio-name h1 {
+    color: #000000;
+    body.dark & {
+      color: #ffffff;
+    }
   }
 
   .presentation-paragraph {
@@ -146,12 +316,16 @@ body {
       font-size: 17px;                 
       cursor: pointer;
       transition: all 0.3s;
-
-     &:hover {
-        background-color: #903ae4;
+      
+      body.dark & {
+        color: #ffffff;
       }
+      &:hover {
+        background-color: #903ae4;
+        
       }
     }
+  }
 }
 
 // Imagen
@@ -167,7 +341,7 @@ body {
 
 
 
-  /*Responsive Desing nueva sintaxis mediaquerys*/
+  /*Responsive Desing nueva sintaxis mediaquerys de prueba*/
   @media(max-width:560px){
     .portfolio-container,.flex-container {
       flex-direction: column;
@@ -197,6 +371,4 @@ body {
     .container-btn {
       justify-content: center;
     }
-    
   }
-

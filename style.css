@@ -16,18 +16,170 @@
 body {
   font-family: "Poppins", sans-serif;
   transition: 0.3s ease all;
-  /* Estilos modo oscuro*/
+  background-image: url(img/scattered-forcefields\ \(white\).svg);
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease all;
+  /* Estilos modo oscuro */
 }
 body.dark {
   background: #1f1d2b;
-  background-image: url(img/scattered-forcefields\ \(3\).svg);
+  background-image: url(img/scattered-forcefields\ \(6\).svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-body.dark .portfolio-name h1 {
-  color: #ffffff;
+body header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #233432;
+  background: linear-gradient(90deg, rgb(66, 2, 82) 0%, rgb(1, 7, 39) 100%);
+  height: 90px;
 }
-body.dark .container-btn :nth-child(2) {
+body header #btnMobile {
+  display: none;
+  height: 0;
+  width: 0;
+  margin-top: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+@media screen and (max-width: 560px) {
+  body header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #233432;
+    background: linear-gradient(90deg, rgb(66, 2, 82) 0%, rgb(1, 7, 39) 100%);
+  }
+  body header #btnMobile {
+    display: flex;
+    position: absolute;
+    left: 30px;
+    top: 35px;
+    flex-direction: column;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background: transparent;
+    gap: 10px;
+  }
+  body.dark body header #btnMobile {
+    filter: invert(100%);
+  }
+}
+body header #btnMobile div {
+  background-color: #f1f1f1;
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform-origin: left;
+}
+body header #btnMobile:hover div:first-child {
+  transform: rotate(44deg);
+}
+body header #btnMobile:hover div:nth-child(2) {
+  opacity: 0;
+}
+body header #btnMobile:hover div:last-child {
+  transform: rotate(-44deg);
+}
+body.dark body header {
+  background: linear-gradient(90deg, rgb(180, 105, 199) 0%, rgb(178, 178, 240) 100%);
+}
+body header nav {
+  margin: 10px;
+}
+body header nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+@media screen and (max-width: 560px) {
+  body header nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+body header nav ul .logo {
+  height: 100px;
+  width: 100px;
+  filter: invert(100%);
+}
+body.dark body header nav ul .logo {
+  filter: brightness(0%);
+}
+body header nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 15px;
+}
+body header nav ul a:hover {
+  transition: all 0.3s;
+  color: #2599e6;
+}
+body.dark body header nav ul a {
+  color: #1f1d2b;
+  font-weight: 700;
+}
+body.dark body header nav ul a:hover {
+  transition: all 0.3s;
+  color: #065e91;
+}
+body header .switch {
+  background-color: #343d5b;
+  width: 50px;
+  height: 24px;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+@media screen and (max-width: 560px) {
+  body header .switch {
+    position: absolute;
+    right: 25px;
+    top: 44px;
+  }
+}
+body header .switch::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-color: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+body header .switch.active {
+  background-color: rgb(250, 158, 19);
+}
+body header .switch.active::after {
+  right: 0;
+  left: unset;
+}
+body header .switch span {
+  font-size: 17px;
+  width: 30px;
+  height: 30px;
+  line-height: 26px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+body header .portfolio-name h1 {
+  color: #000000;
+}
+body header .container-btn :nth-child(2) {
   color: #ffffff;
 }
 
@@ -56,6 +208,12 @@ body.dark .container-btn :nth-child(2) {
 }
 .content-container .portfolio-name {
   font-size: 28px;
+}
+.content-container .portfolio-name h1 {
+  color: #000000;
+}
+body.dark .content-container .portfolio-name h1 {
+  color: #ffffff;
 }
 .content-container .presentation-paragraph {
   font-size: 17px;
@@ -90,6 +248,9 @@ body.dark .container-btn :nth-child(2) {
   cursor: pointer;
   transition: all 0.3s;
 }
+body.dark .content-container .container-btn :last-child {
+  color: #ffffff;
+}
 .content-container .container-btn :last-child:hover {
   background-color: #903ae4;
 }
@@ -103,7 +264,7 @@ body.dark .container-btn :nth-child(2) {
   border-radius: 50%;
 }
 
-/*Responsive Desing nueva sintaxis mediaquerys*/
+/*Responsive Desing nueva sintaxis mediaquerys de prueba*/
 @media (max-width: 560px) {
   .portfolio-container, .flex-container {
     flex-direction: column;
