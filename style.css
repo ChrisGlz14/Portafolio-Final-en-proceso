@@ -289,4 +289,95 @@ body.dark .content-container .container-btn :last-child {
   .container-btn {
     justify-content: center;
   }
+}
+.proyectos-container {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 60%;
+  justify-content: center;
+  height: auto;
+  border-radius: 8px;
+  background: transparent;
+  padding: 60px;
+}
+@media screen and (max-width: 1000px) {
+  .proyectos-container {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.img-proyectos {
+  flex: 0 0 auto;
+  margin: 0 auto;
+  height: 202px;
+  width: 373px;
+  border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0px 0px 55px 0px rgb(0, 0, 0) inset;
+}
+
+.card-container {
+  flex: 0 0 80%;
+  margin-left: 50px;
+}
+@media screen and (max-width: 1000px) {
+  .card-container {
+    margin: 0 20px;
+  }
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.icons {
+  font-size: 28px;
+  cursor: pointer;
+}
+.icons i {
+  transition: all 0.1s;
+  margin: 8px;
+  color: #903ae4;
+}
+.icons :hover {
+  color: rgba(168, 104, 231, 0.7411764706);
+}
+
+.footer-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.description-card {
+  color: #000;
+}
+body.dark .description-card {
+  color: #fff;
+}
+
+h3 {
+  color: #000;
+}
+body.dark h3 {
+  color: #fff;
+}
+
+.footer-icons {
+  font-size: 28px;
+}
+.footer-icons i {
+  margin: 8px;
+}
+body.dark .footer-icons i {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
