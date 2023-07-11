@@ -44,7 +44,7 @@ body header #btnMobile {
   border: none;
   background: none;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1000px) {
   body header {
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@ body header nav ul {
   align-items: center;
   list-style: none;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1000px) {
   body header nav ul {
     display: flex;
     flex-direction: column;
@@ -111,11 +111,16 @@ body.dark body header nav ul .logo {
   filter: brightness(0%);
 }
 body header nav ul a {
-  display: none;
   text-decoration: none;
   color: #ffffff;
   font-weight: 400;
   margin: 15px;
+}
+@media screen and (max-width: 1000px) {
+  body header nav ul a {
+    display: none;
+    flex-direction: column;
+  }
 }
 body header nav ul a:hover {
   transition: all 0.3s;
@@ -199,7 +204,6 @@ body header .container-btn :nth-child(2) {
 
 .content-container {
   display: flex;
-  flex: 1;
   flex-direction: column;
 }
 .content-container .container-presentation span {
@@ -257,7 +261,7 @@ body.dark .content-container .container-btn :last-child {
 }
 
 .portfolio-img {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 .portfolio-img img {
   max-height: 200px;
@@ -271,7 +275,7 @@ body.dark .content-container .container-btn :last-child {
     flex-direction: column;
     row-gap: 40px;
     margin: 20px 0;
-    height: 120vh;
+    height: 100vh;
   }
   .portfolio-img img {
     justify-content: center;
@@ -294,7 +298,7 @@ body.dark .content-container .container-btn :last-child {
 .card-container-all h2 {
   text-align: center;
   color: #ffffff;
-  margin: 30px;
+  margin-top: 95px;
 }
 
 .proyectos-container {
@@ -367,6 +371,11 @@ body.dark .content-container .container-btn :last-child {
   color: #000;
   min-width: 330px;
 }
+@media screen and (max-width: 1000px) {
+  .description-card {
+    margin: 20px;
+  }
+}
 body.dark .description-card {
   color: #fff;
 }
@@ -377,7 +386,7 @@ h3 {
 }
 @media screen and (max-width: 1000px) {
   h3 {
-    margin-top: 20px;
+    margin: 20px;
   }
 }
 body.dark h3 {

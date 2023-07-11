@@ -98,7 +98,7 @@ body {
       background: none;
     }
 
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 1000px) {
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -149,7 +149,7 @@ body {
         display: flex;
         align-items: center;
         list-style: none;
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 1000px) {
           display: flex;
           flex-direction: column;
         }
@@ -163,11 +163,18 @@ body {
           }
         }
         a {
-          display: none;
+          
           text-decoration: none;
           color: #ffffff;
           font-weight: 400;
           margin: 15px;
+
+          @media screen and (max-width: 1000px) {
+            display: none;
+            flex-direction: column;
+          }
+
+
           &:hover {
             transition: all 0.3s;
             color: #2599e6;
@@ -262,7 +269,6 @@ body {
 
 .content-container {
   display: flex;
-  flex: 1;
   flex-direction: column;
   
 
@@ -331,14 +337,16 @@ body {
 
 // Imagen
 .portfolio-img {
-  margin-left: 20px;
+  margin-left: 0px;
+ 
+
 
   img {
   max-height: 200px;
   border: solid $first-color 3px;
   border-radius: 50%;
   }
-}
+} 
 
 
 
@@ -348,7 +356,7 @@ body {
       flex-direction: column;
       row-gap: 40px;
       margin: 20px 0;
-      height: 120vh;
+      height: 100vh;
     }
 
     .portfolio-img img {
@@ -381,7 +389,7 @@ body {
     h2 {
       text-align: center;
       color: #ffffff;
-      margin: 30px;
+      margin-top: 95px;
     }
   }
 
@@ -467,6 +475,11 @@ body {
 .description-card {
   color:#000;
   min-width: 330px;
+
+  @media screen and (max-width:1000px) {
+    margin: 20px;
+  }
+
   
     body.dark & {
       color: #fff;
@@ -476,7 +489,7 @@ h3 {
   color: #000;
   text-align: center;
   @media screen and (max-width:1000px) {
-  margin-top: 20px;
+  margin: 20px;
 }
 
   body.dark & {
