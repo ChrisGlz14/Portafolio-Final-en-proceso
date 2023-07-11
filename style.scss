@@ -163,6 +163,7 @@ body {
           }
         }
         a {
+          display: none;
           text-decoration: none;
           color: #ffffff;
           font-weight: 400;
@@ -347,7 +348,7 @@ body {
       flex-direction: column;
       row-gap: 40px;
       margin: 20px 0;
-      height: 80vh;
+      height: 120vh;
     }
 
     .portfolio-img img {
@@ -375,6 +376,15 @@ body {
 
 
   // PROYECTOS
+
+  .card-container-all {
+    h2 {
+      text-align: center;
+      color: #ffffff;
+      margin: 30px;
+    }
+  }
+
   .proyectos-container {
     display: flex;
     margin: 0 auto;
@@ -382,13 +392,12 @@ body {
     width: 60%;
     justify-content: center;
     height: auto;
-    border-radius: 8px;
     background: transparent;
     padding: 60px;
     
         @media screen and (max-width:1000px) {
             display: inline-flex ;
-            flex-direction: column;
+           
             flex-wrap: wrap;
             width: 100%;
         }
@@ -429,7 +438,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0px ;
+  margin: 50px ;
   
 }
 
@@ -457,6 +466,7 @@ body {
 
 .description-card {
   color:#000;
+  min-width: 330px;
   
     body.dark & {
       color: #fff;
@@ -464,18 +474,32 @@ body {
 }
 h3 {
   color: #000;
+  text-align: center;
+  @media screen and (max-width:1000px) {
+  margin-top: 20px;
+}
 
   body.dark & {
     color: #fff;
   }
 }
 
-.footer-icons{
-  font-size: 28px;
+.icons {
+  display: flex;
+  justify-content: end;
 
+  @media screen and (max-width:1000px) {
+    justify-content: center;
+  }
+}
+
+.footer-icons{
+  display: flex;
+  font-size: 28px;
 
   i {
     margin: 8px;
+
 
     body.dark & {
       color: #fff;

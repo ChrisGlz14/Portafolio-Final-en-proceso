@@ -111,15 +111,11 @@ body.dark body header nav ul .logo {
   filter: brightness(0%);
 }
 body header nav ul a {
+  display: none;
   text-decoration: none;
   color: #ffffff;
   font-weight: 400;
   margin: 15px;
-}
-@media screen and (max-width: 560px) {
-  body header nav ul a {
-    display: none;
-  }
 }
 body header nav ul a:hover {
   transition: all 0.3s;
@@ -275,7 +271,7 @@ body.dark .content-container .container-btn :last-child {
     flex-direction: column;
     row-gap: 40px;
     margin: 20px 0;
-    height: 80vh;
+    height: 120vh;
   }
   .portfolio-img img {
     justify-content: center;
@@ -295,6 +291,12 @@ body.dark .content-container .container-btn :last-child {
     justify-content: center;
   }
 }
+.card-container-all h2 {
+  text-align: center;
+  color: #ffffff;
+  margin: 30px;
+}
+
 .proyectos-container {
   display: flex;
   margin: 0 auto;
@@ -302,14 +304,12 @@ body.dark .content-container .container-btn :last-child {
   width: 60%;
   justify-content: center;
   height: auto;
-  border-radius: 8px;
   background: transparent;
   padding: 60px;
 }
 @media screen and (max-width: 1000px) {
   .proyectos-container {
     display: inline-flex;
-    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
   }
@@ -340,7 +340,7 @@ body.dark .content-container .container-btn :last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0px;
+  margin: 50px;
 }
 
 .icons {
@@ -365,6 +365,7 @@ body.dark .content-container .container-btn :last-child {
 
 .description-card {
   color: #000;
+  min-width: 330px;
 }
 body.dark .description-card {
   color: #fff;
@@ -372,12 +373,29 @@ body.dark .description-card {
 
 h3 {
   color: #000;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  h3 {
+    margin-top: 20px;
+  }
 }
 body.dark h3 {
   color: #fff;
 }
 
+.icons {
+  display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 1000px) {
+  .icons {
+    justify-content: center;
+  }
+}
+
 .footer-icons {
+  display: flex;
   font-size: 28px;
 }
 .footer-icons i {
