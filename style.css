@@ -116,6 +116,11 @@ body header nav ul a {
   font-weight: 400;
   margin: 15px;
 }
+@media screen and (max-width: 560px) {
+  body header nav ul a {
+    display: none;
+  }
+}
 body header nav ul a:hover {
   transition: all 0.3s;
   color: #2599e6;
