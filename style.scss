@@ -419,8 +419,12 @@ body {
     width: 373px;
     border-radius: 6px;
     object-fit: cover;
-    box-shadow: 0px 0px 55px 0px rgba(0,0,0,1) inset;
-
+    transition: transform 0.2s, box-shadow 0.2s;
+  &:hover {
+    transition: .2s ease-in;
+    scale: (1.05);
+    box-shadow: 0px 1px 30px 1px rgba(0,0,0,1);
+  }
 }
 
 // .shadow {
@@ -461,7 +465,8 @@ body {
   }
   
   :hover {
-    color: #a868e7bd;
+    color: #cfb6e7bd;
+    scale: (1.1);
   }
 }
 

@@ -327,7 +327,12 @@ body.dark .content-container .container-btn :last-child {
   border-radius: 6px;
   -o-object-fit: cover;
      object-fit: cover;
-  box-shadow: 0px 0px 55px 0px rgb(0, 0, 0) inset;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.img-proyectos:hover {
+  transition: 0.2s ease-in;
+  scale: 1.05;
+  box-shadow: 0px 1px 30px 1px rgb(0, 0, 0);
 }
 
 .card-container {
@@ -357,7 +362,8 @@ body.dark .content-container .container-btn :last-child {
   color: #903ae4;
 }
 .icons :hover {
-  color: rgba(168, 104, 231, 0.7411764706);
+  color: rgba(207, 182, 231, 0.7411764706);
+  scale: 1.1;
 }
 
 .footer-card {
