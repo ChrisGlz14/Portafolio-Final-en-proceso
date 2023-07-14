@@ -193,7 +193,7 @@ body header .container-btn :nth-child(2) {
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  height: 100vh;
+  height: 70vh;
 }
 
 .flex-container {
@@ -275,7 +275,7 @@ body.dark .content-container .container-btn :last-child {
     flex-direction: column;
     row-gap: 40px;
     margin: 20px 0;
-    height: 100vh;
+    height: 85vh;
   }
   .portfolio-img img {
     justify-content: center;
@@ -418,4 +418,47 @@ body.dark h3 {
 }
 body.dark .footer-icons i {
   color: #fff;
+}
+.footer-icons img {
+  filter: invert(0%);
+}
+body.dark .footer-icons img {
+  filter: invert(100%);
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.about-me .about-me-title {
+  text-align: center;
+}
+.about-me .about-me-text {
+  max-width: 1160px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+body.dark .about-me {
+  color: #fff;
+}
+
+.stack-container {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.stack-container .stack-title {
+  text-align: center;
+}
+.stack-container .tecnologies-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.stack-container .tecnologies-logo img {
+  width: 55px;
+  margin: 30px;
 }/*# sourceMappingURL=style.css.map */

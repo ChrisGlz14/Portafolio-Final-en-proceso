@@ -258,7 +258,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  height: 100vh;
+  height: 70vh;
 }
 
 .flex-container {
@@ -356,7 +356,7 @@ body {
       flex-direction: column;
       row-gap: 40px;
       margin: 20px 0;
-      height: 100vh;
+      height: 85vh;
     }
 
     .portfolio-img img {
@@ -517,10 +517,69 @@ h3 {
 
   i {
     margin: 8px;
+  
+    
 
 
     body.dark & {
       color: #fff;
+    }
+  }
+  img {
+    filter: invert(0%);
+
+    body.dark & {
+      filter: invert(100%);
+    }
+  
+  
+  }
+}
+
+.about-me {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+
+  .about-me-title {
+    text-align: center;
+
+  }
+
+  .about-me-text {
+    max-width: 1160px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+
+
+  body.dark & {
+    color: #fff;
+   }
+}
+
+
+.stack-container {
+  text-align: center;
+  color: rgb(255, 255, 255);
+
+  .stack-title {
+    text-align: center;
+
+
+  }
+  .tecnologies-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      width: 55px;
+      margin: 30px;
     }
   }
 }
