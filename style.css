@@ -23,7 +23,7 @@ body {
 }
 body.dark {
   background: #1f1d2b;
-  background-image: url(img/scattered-forcefields\ \(6\).svg);
+  background-image: url(img/scattered-forcefields\ \(5\).svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -230,6 +230,7 @@ body.dark .content-container .portfolio-name h1 {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  margin: 40px;
   /* Estilos para el primer botón */
   /* Estilos para el segundo botón */
 }
@@ -243,7 +244,7 @@ body.dark .content-container .portfolio-name h1 {
   margin-right: 8px;
   cursor: pointer;
 }
-.content-container .container-btn :last-child {
+.content-container .container-btn :nth-child(2) {
   padding: 14px;
   border-radius: 5px;
   border: 1px solid #903ae4;
@@ -253,13 +254,45 @@ body.dark .content-container .portfolio-name h1 {
   cursor: pointer;
   transition: all 0.3s;
 }
-body.dark .content-container .container-btn :last-child {
+body.dark .content-container .container-btn :nth-child(2) {
   color: #ffffff;
 }
-.content-container .container-btn :last-child:hover {
+.content-container .container-btn :nth-child(2):hover {
   background-color: #903ae4;
 }
+.content-container .container-btn :nth-child(3) i {
+  padding: 0px;
+  background-color: transparent;
+  font-size: 50px;
+  margin-left: 8px;
+  color: #903ae4;
+  cursor: pointer;
+}
+.content-container .container-btn :nth-child(4) i {
+  padding: 0px;
+  font-size: 50px;
+  margin-left: px;
+  background-color: transparent;
+  color: #903ae4;
+  cursor: pointer;
+}
+.content-container .container-btn :nth-child(5) i {
+  padding: 0px;
+  font-size: 50px;
+  margin-left: px;
+  background-color: transparent;
+  color: #903ae4;
+  cursor: pointer;
+}
 
+@media (max-width: 560px) {
+  .container-btn {
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    margin: 20px 0;
+  }
+}
 .portfolio-img {
   margin-left: 0px;
 }
@@ -269,7 +302,6 @@ body.dark .content-container .container-btn :last-child {
   border-radius: 50%;
 }
 
-/*Responsive Desing nueva sintaxis mediaquerys de prueba*/
 @media (max-width: 560px) {
   .portfolio-container, .flex-container {
     flex-direction: column;
