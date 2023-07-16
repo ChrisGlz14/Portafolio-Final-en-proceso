@@ -303,9 +303,8 @@ body {
 
   .container-btn {
     display: flex;
-    flex-direction: row;
-    margin-top: 10px; 
-    margin-top: 40px;
+    flex-direction: row; 
+    margin-top: 60px;
     
     /* Estilos para el primer botón */
     :first-child {
@@ -361,7 +360,6 @@ body {
     a {
     padding: 0px;
     font-size: 50px;
-    
     background-color: transparent;
     color: #903ae4;          
     cursor: pointer;

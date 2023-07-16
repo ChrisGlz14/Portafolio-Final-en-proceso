@@ -230,8 +230,7 @@ body.dark .content-container .portfolio-name h1 {
 .content-container .container-btn {
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
-  margin-top: 40px;
+  margin-top: 60px;
   /* Estilos para el primer botón */
   /* Estilos para el segundo botón */
 }
