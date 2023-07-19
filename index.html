@@ -28,10 +28,10 @@
       <nav class="navbar" id="nav">
         <ul>
           <img class="logo" src="img/logoCGc.svg" alt="Logo" />
-          <a href="#" class="links">Home</a>
-          <a href="#" class="links">Proyectos</a>
-          <a href="#" class="links">Sobre Mi</a>
-          <a href="#" class="links">Contacto</a>
+          <a href="#" class="links" id="nav-home" >Home</a>
+          <a href="#" class="links" id="nav-projects" >Proyectos</a>
+          <a href="#" class="links" id="nav-about-me" >Sobre Mi</a>
+          <a href="#" class="links" id="nav-stack" >Mi Stack Tecnologico</a>
           <button class="switch" id="switch">
             <span><i class="fa-solid fa-sun"></i></span>
             <span><i class="fa-solid fa-moon"></i></span>
@@ -41,7 +41,7 @@
     </header>
 
     <!-- PRESENTACION -->
-    <div class="portfolio-container">
+    <div class="portfolio-container" id="home">
       <div class="flex-container">
         <div class="content-container">
           <div class="container-presentation">
@@ -80,13 +80,13 @@
     </div>
 
     <!-- PROYECTOS -->
-    <!-- PROYECTO ANCORA -->
 
-    <div class="card-container-all">
+    <div class="card-container-all" id="projects">
       <h2>PROYECTOS</h2>
+
+      <!-- PROYECTO ANCORA -->
       <div class="proyectos-container">
         <img class="img-proyectos" src="./img/ancora.png" alt="" />
-        <!-- <div class="shadow"></div> -->
         <div class="card-container">
           <div class="header-container">
             <h3>ANCORA EMPRESA CONSTRUCTORA</h3>
@@ -96,11 +96,11 @@
             </div>
           </div>
           <p class="description-card">
-            Mi experiencia como freelance con Ancora me permitió aplicar mis
-            conocimientos en desarrollo web y trabajar en estrecha colaboración
-            con un equipo para mejorar su presencia en línea y funcionalidad
-            mediante el uso de tecnologías como Bootstrap, HTML, CSS y
-            JavaScript.
+            A pesar de estar en pleno desarrollo, mi experiencia como freelance
+            con Ancora me permitió aplicar mis conocimientos en desarrollo web y
+            trabajar en estrecha colaboración con un equipo para mejorar su
+            presencia en línea y funcionalidad mediante el uso de tecnologías
+            como Bootstrap, HTML, CSS y JavaScript.
           </p>
           <div class="footer-card">
             <h3>Tecnologias y Herramientas utilizadas:</h3>
@@ -114,11 +114,38 @@
           </div>
         </div>
       </div>
+
+      <!-- PROYECTO APP DE NOTAS  -->
+      <div class="proyectos-container">
+        <img class="img-proyectos" src="./img/noteAPP.png" alt="" />
+        <div class="card-container">
+          <div class="header-container">
+            <h3>APP DE NOTAS</h3>
+            <div class="icons">
+              <i class="fa-brands fa-github"></i>
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+          </div>
+          <p class="description-card">
+            Una app que me ayudó a consolidar muchos conceptos de Css y sobre
+            todo Javascript como el dominio del DOM y Local Storage, Ademas que
+            es muy util en el dia a dia permitiendo organizar mis actividades.
+          </p>
+          <div class="footer-card">
+            <h3>Tecnologias y Herramientas utilizadas:</h3>
+            <div class="footer-icons">
+              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-css3-alt"></i>
+              <i class="fa-brands fa-square-js"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- SOBRE MI -->
 
-    <section class="about-me">
+    <section class="about-me" id="about-me">
       <div class="about-me-title">
         <h2>SOBRE MI</h2>
       </div>
@@ -135,7 +162,7 @@
 
     <!-- STACK TECNOLOGIAS -->
 
-    <section class="stack-container">
+    <section class="stack-container" id="stack">
       <div class="stack-title">
         <h2>MI STACK</h2>
       </div>
