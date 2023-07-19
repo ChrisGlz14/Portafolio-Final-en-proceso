@@ -54,7 +54,7 @@ $z-modal: 1000;
 }
 
 /* Colores */
-$first-color: #903ae4;
+$first-color: #a63929;
 $second-color: #4b5662;
 
 /* Variables Dark theme */
@@ -68,14 +68,16 @@ $second-color: #4b5662;
 body {
   font-family: $body-font;
   transition: 0.3s ease all;
-  background-image: url(img/scattered-forcefields\ \(white\).svg);
+  background-image: url(img/backgroundWhite.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Poppins", sans-serif;
   transition: 0.3s ease all;
   
   /* Estilos modo oscuro */
   &.dark {
     background: #1f1d2b;
-    background-image: url(img/scattered-forcefields\ \(5\).svg);
+    background-image: url(img/backgroundBlack.svg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -87,7 +89,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #233432;
-    background: linear-gradient(90deg, rgb(66, 2, 82) 0%, rgb(1, 7, 39) 100%);
+    background: linear-gradient(90deg, $first-color 0%, rgb(1, 7, 39) 100%);
     height: 90px;
 
     #btnMobile {
@@ -186,7 +188,7 @@ body {
             color: #1f1d2b;
             font-weight: 700;
             &:hover {
-              transition: all 0.3s;
+              transition: all 0.2s;
               color: #065e91;
             }
           }
@@ -280,7 +282,7 @@ body {
   .container-presentation span{
     font-size: 20px;
     font-weight: 600;
-    color: #903ae4;
+    color: $first-color;
   }
 
   .portfolio-name {
@@ -311,7 +313,7 @@ body {
       padding: 14px;
       border-radius: 5px;
       border: none;
-      background-color: #903ae4;
+      background-color: $first-color;
       color: #ffffff;
       font-size: 17px;                 
       margin-right: 8px;
@@ -322,7 +324,7 @@ body {
     :nth-child(2) {
       padding: 14px;
       border-radius: 5px;
-      border: 1px solid #903ae4;
+      border: 1px solid $first-color;
       background-color: transparent;
       color: #000000;
       font-size: 17px;                 
@@ -333,7 +335,7 @@ body {
         color: #ffffff;
       }
       &:hover {
-        background-color: #903ae4;
+        background-color: $first-color;
       }
     }
   }
@@ -361,7 +363,7 @@ body {
     padding: 0px;
     font-size: 50px;
     background-color: transparent;
-    color: #903ae4;          
+    color: $first-color;          
     cursor: pointer;
   }
 }
@@ -439,7 +441,8 @@ body {
     margin: 0 auto;
     height: 202px;
     width: 373px;
-    border-radius: 6px;
+    border-radius: 3px;
+    border: 2px solid $first-color;
     object-fit: cover;
     transition: transform 0.2s, box-shadow 0.2s;
   &:hover {
@@ -473,12 +476,12 @@ body {
   i {
     transition: all 0.1s;
     margin: 8px;
-    color: #903ae4;
+    color: $first-color;
   }
   
   :hover {
-    color: #cfb6e7bd;
-    scale: (1.1);
+    color: #a83737;
+    scale: (1.05);
   }
 }
 
