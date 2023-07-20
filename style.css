@@ -52,7 +52,7 @@ body header #btnMobile {
     flex-direction: column;
     height: 100%;
     background-color: #233432;
-    background: linear-gradient(90deg, rgb(66, 2, 82) 0%, rgb(1, 7, 39) 100%);
+    background: linear-gradient(90deg, rgb(161, 5, 12) 0%, rgb(73, 2, 6) 100%);
   }
   body header #btnMobile {
     display: flex;
@@ -245,8 +245,10 @@ body.dark .content-container .portfolio-name h1 {
   font-size: 17px;
   margin-right: 8px;
   cursor: pointer;
+  text-decoration: none;
 }
 .content-container .container-btn :nth-child(2) {
+  font-family: "Poppins", sans-serif;
   padding: 14px;
   border-radius: 5px;
   border: 1px solid #a63929;
@@ -313,8 +315,11 @@ body.dark .content-container .container-btn :nth-child(2) {
 .card-container-all h2 {
   text-align: center;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   margin-top: 95px;
+}
+body.dark .card-container-all h2 {
+  color: #ffffff;
 }
 
 .proyectos-container {
@@ -473,6 +478,10 @@ body.dark .about-me {
 }
 .stack-container .stack-title {
   text-align: center;
+  color: #000;
+}
+body.dark .stack-container .stack-title {
+  color: #ffffff;
 }
 .stack-container .tecnologies-logo {
   display: flex;

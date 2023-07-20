@@ -106,7 +106,7 @@ body {
       flex-direction: column;
       height: 100%;
       background-color: #233432;
-      background: linear-gradient(90deg, rgb(66, 2, 82) 0%, rgb(1, 7, 39) 100%);
+      background: linear-gradient(90deg, rgb(161, 5, 12) 0%, rgb(73, 2, 6) 100%);
 
       #btnMobile {
         display: flex;
@@ -317,10 +317,12 @@ body {
       font-size: 17px;
       margin-right: 8px;
       cursor: pointer;
+      text-decoration: none;
     }
 
     /* Estilos para el segundo botón */
     :nth-child(2) {
+      font-family: $body-font;
       padding: 14px;
       border-radius: 5px;
       border: 1px solid $first-color;
@@ -403,8 +405,12 @@ body {
   h2 {
     text-align: center;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
     margin-top: 95px;
+    
+    body.dark & {
+      color: #ffffff;
+    }
   }
   // @media screen and (max-width:1000px) {
   // height: 100vh;
@@ -570,6 +576,10 @@ h3 {
 
   .stack-title {
     text-align: center;
+    color: #000;
+    body.dark & {
+      color: #ffffff;
+    }
   }
   .tecnologies-logo {
     display: flex;
