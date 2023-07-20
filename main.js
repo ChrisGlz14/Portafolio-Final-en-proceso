@@ -54,7 +54,7 @@ btnMobile.addEventListener("click", () => {
 // GO UP BTN
 
 window.onscroll = function () {
-  if (document.documentElement.scrollTop > 200) {
+  if (document.documentElement.scrollTop > 500) {
     document.querySelector(".go-top-container").classList.add("show");
   } else {
     document.querySelector(".go-top-container").classList.remove("show");
