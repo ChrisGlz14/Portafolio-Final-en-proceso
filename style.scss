@@ -592,3 +592,63 @@ h3 {
     }
   }
 }
+
+
+//BOTON IR ARRIBA
+.go-top-container {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  right: 4rem;
+  bottom: 5rem;
+  z-index: -2;
+
+  .go-top-btn {
+    position: fixed;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    z-index: -1;
+      
+    .arrow-btn {
+      position: absolute;
+      color: $first-color;
+      height: 5rem;
+      width: 5rem;
+      transition: all .3s;
+      transform: scale(0);
+    }
+  }
+}
+
+.go-top-container.show {
+  z-index: 11;
+
+  .go-top-btn {
+    animation: popup 0.3s ease-in-out;
+    width: 5rem;
+    height: 5rem;
+    z-index: 11;
+
+    .arrow-btn {
+      transform: scale(1);
+    }
+  }
+}
+
+@keyframes popup {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  50% {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  100% {
+    width: 5rem;
+    height: 5rem;
+  }
+}

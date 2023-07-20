@@ -491,4 +491,56 @@ body.dark .stack-container .stack-title {
 .stack-container .tecnologies-logo img {
   width: 55px;
   margin: 30px;
+}
+
+.go-top-container {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  right: 4rem;
+  bottom: 5rem;
+  z-index: -2;
+}
+.go-top-container .go-top-btn {
+  position: fixed;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  z-index: -1;
+}
+.go-top-container .go-top-btn .arrow-btn {
+  position: absolute;
+  color: #a63929;
+  height: 5rem;
+  width: 5rem;
+  transition: all 0.3s;
+  transform: scale(0);
+}
+
+.go-top-container.show {
+  z-index: 11;
+}
+.go-top-container.show .go-top-btn {
+  animation: popup 0.3s ease-in-out;
+  width: 5rem;
+  height: 5rem;
+  z-index: 11;
+}
+.go-top-container.show .go-top-btn .arrow-btn {
+  transform: scale(1);
+}
+
+@keyframes popup {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 8rem;
+    height: 8rem;
+  }
+  100% {
+    width: 5rem;
+    height: 5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -51,4 +51,20 @@ btnMobile.addEventListener("click", () => {
   }
 });
 
-// Principal Presentacion
+// GO UP BTN
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 200) {
+    document.querySelector(".go-top-container").classList.add("show");
+  } else {
+    document.querySelector(".go-top-container").classList.remove("show");
+    ;
+  }
+};
+
+const btnTop = document.querySelector(".arrow-btn");
+
+btnTop.addEventListener("click", function () {
+  window.scrollTo({top:0, behavior:"smooth"})
+})
+
