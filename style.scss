@@ -57,6 +57,18 @@ $z-modal: 1000;
 $first-color: #a63929;
 $second-color: #4b5662;
 
+// MIXIN GRID
+@mixin grid($columnas, $espacio) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espacio;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 0em;
+  }
+}
+
 /* Variables Dark theme */
 
 * {
@@ -545,21 +557,72 @@ h3 {
       filter: invert(100%);
     }
   }
+}
 
-  // MAS PROYECTOS
+// MAS PROYECTOS
+.more-projects {
+  .grid-container-more-projects {
+    @include grid(3, 3em);
 
-  .more-projects {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    
-    .grid-container-more-projects {
+    .grid-project {
+      display: grid;
+      justify-content: center;
+      margin: 15px;
 
-      .grid-project {
+      img {
+        display: flex;
+        height: 300px;
+        width: auto;
+        margin: 0 auto;
+      }
+
+      p {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        
+        body.dark & {
+          color: #ffffff;
+      }
+      }
+
+
+      .icon-grid {
+        display: flex;
+        font-size: 28px;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          transition: all 0.1s;
+          margin: 8px;
+          color: rgb(0, 0, 0);
+
+          body.dark & {
+            color: #ffffff;
+        }
+        }
+      }
+
+      .icons-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        cursor: pointer;
+
+        i {
+          transition: all 0.1s;
+          margin: 8px;
+          color: $first-color;
+        }
+
+        :hover {
+          color: #a83737;
+        }
       }
     }
   }
 }
-
 .about-me {
   display: flex;
   flex-direction: column;
