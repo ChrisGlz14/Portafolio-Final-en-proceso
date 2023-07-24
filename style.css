@@ -257,6 +257,7 @@ body.dark .content-container .portfolio-name h1 {
   font-size: 17px;
   cursor: pointer;
   transition: all 0.3s;
+  text-decoration: none;
 }
 body.dark .content-container .container-btn :nth-child(2) {
   color: #ffffff;

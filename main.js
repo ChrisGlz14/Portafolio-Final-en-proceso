@@ -3,6 +3,7 @@
 const btnSwitch = document.querySelector("#switch");
 const btnMobile = document.querySelector(".btnMobile");
 
+
 btnSwitch.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   btnSwitch.classList.toggle("active");
@@ -67,4 +68,25 @@ const btnTop = document.querySelector(".arrow-btn");
 btnTop.addEventListener("click", function () {
   window.scrollTo({top:0, behavior:"smooth"})
 })
+
+
+//Email Contacto
+
+const sendMail = document.getElementById("btn-mail");
+
+// Escucha el evento de clic en el enlace
+sendMail.addEventListener('click', handleSubmit);
+
+// Función para abrir el cliente de correo con la dirección predefinida
+function handleSubmit(e) {
+  // Previene el comportamiento por defecto del enlace (navegar a una nueva página)
+  e.preventDefault();
+
+  // Obtiene la dirección de correo electrónico del atributo "href" del enlace
+  const emailLink = sendMail.getAttribute('href');
+
+  // Abre el cliente de correo con la dirección predefinida
+  window.location.href = emailLink;
+}
+
 
