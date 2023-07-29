@@ -331,7 +331,7 @@ body {
       background-color: $first-color;
       color: #ffffff;
       font-size: 17px;
-      margin-right: 8px;
+      margin-right: 10px;
       cursor: pointer;
       text-decoration: none;
     }
@@ -348,6 +348,7 @@ body {
       cursor: pointer;
       transition: all 0.3s;
       text-decoration: none;
+      margin-right: 10px;
 
       body.dark & {
         color: #ffffff;
@@ -417,6 +418,7 @@ body {
 }
 
 // PROYECTOS
+
 
 .card-container-all {
   h2 {
@@ -518,7 +520,16 @@ body {
   body.dark & {
     color: #fff;
   }
+  p {
+    text-align: start;
+  }
+
 }
+
+.span-text {
+  color: $first-color;
+}
+
 h3 {
   color: #000;
   text-align: center;
@@ -638,7 +649,7 @@ h3 {
 
   .about-me-text {
     max-width: 1160px;
-    display: flex;
+    text-align: start;
     justify-content: center;
     padding: 20px;
   }

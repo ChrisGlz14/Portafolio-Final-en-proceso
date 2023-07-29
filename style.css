@@ -243,7 +243,7 @@ body.dark .content-container .portfolio-name h1 {
   background-color: #a63929;
   color: #ffffff;
   font-size: 17px;
-  margin-right: 8px;
+  margin-right: 10px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -258,6 +258,7 @@ body.dark .content-container .portfolio-name h1 {
   cursor: pointer;
   transition: all 0.3s;
   text-decoration: none;
+  margin-right: 10px;
 }
 body.dark .content-container .container-btn :nth-child(2) {
   color: #ffffff;
@@ -408,6 +409,13 @@ body.dark .card-container-all h2 {
 body.dark .description-card {
   color: #fff;
 }
+.description-card p {
+  text-align: start;
+}
+
+.span-text {
+  color: #a63929;
+}
 
 h3 {
   color: #000;
@@ -521,7 +529,7 @@ body.dark .more-projects .grid-container-more-projects .grid-project .icon-grid 
 }
 .about-me .about-me-text {
   max-width: 1160px;
-  display: flex;
+  text-align: start;
   justify-content: center;
   padding: 20px;
 }
