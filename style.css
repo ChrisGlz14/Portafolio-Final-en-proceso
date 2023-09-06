@@ -286,6 +286,10 @@ body.dark .content-container .container-btn :nth-child(2) {
   background-color: transparent;
   color: #a63929;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.portfolio-img .contact a:hover {
+  color: #065e91;
 }
 
 @media screen and (max-width: 1000px) {
