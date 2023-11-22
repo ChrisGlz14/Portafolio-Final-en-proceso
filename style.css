@@ -447,6 +447,7 @@ body.dark h3 {
 .footer-icons {
   display: flex;
   font-size: 28px;
+  align-items: center;
 }
 .footer-icons i {
   margin: 8px;
