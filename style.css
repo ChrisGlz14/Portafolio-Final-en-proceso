@@ -358,6 +358,7 @@ body.dark .card-container-all h2 {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .img-proyectos:hover {
+  cursor: pointer;
   transition: 0.2s ease-in;
   scale: 1.05;
   box-shadow: 0px 1px 30px 1px rgb(0, 0, 0);
