@@ -400,6 +400,9 @@ body.dark .card-container-all h2 {
   justify-content: space-between;
   margin: 0;
 }
+.footer-card .footer-icons {
+  align-items: center;
+}
 
 .description-card {
   color: #000;
@@ -447,7 +450,6 @@ body.dark h3 {
 .footer-icons {
   display: flex;
   font-size: 28px;
-  align-items: center;
 }
 .footer-icons i {
   margin: 8px;
@@ -468,6 +470,32 @@ body.dark .footer-icons img {
   gap: 3em;
 }
 @media screen and (max-width: 480px) {
+  .more-projects .grid-container-more-projects {
+    grid-template-columns: 1fr;
+    gap: 0em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .more-projects .grid-container-more-projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 480px) {
+  .more-projects .grid-container-more-projects {
+    grid-template-columns: 1fr;
+    gap: 0em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .more-projects .grid-container-more-projects {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3em;
+  }
+}
+@media screen and (max-width: 600px) and (max-width: 480px) {
   .more-projects .grid-container-more-projects {
     grid-template-columns: 1fr;
     gap: 0em;
