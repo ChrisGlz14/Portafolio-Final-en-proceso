@@ -356,6 +356,12 @@ body.dark .card-container-all h2 {
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.2s, box-shadow 0.2s;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 30% cover 30%;
+  animation-fill-mode: both;
 }
 .img-proyectos:hover {
   cursor: pointer;
@@ -367,6 +373,12 @@ body.dark .card-container-all h2 {
 .card-container {
   flex: 0 0 80%;
   margin-left: 50px;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 30% cover 30%;
+  animation-fill-mode: both;
 }
 @media screen and (max-width: 1000px) {
   .card-container {
@@ -466,6 +478,12 @@ body.dark .footer-icons img {
 }
 
 .more-projects .grid-container-more-projects {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 30% cover 30%;
+  animation-fill-mode: both;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3em;
@@ -644,5 +662,15 @@ body.dark .stack-container .stack-title {
   100% {
     width: 5rem;
     height: 5rem;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
