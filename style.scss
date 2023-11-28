@@ -173,10 +173,20 @@ body {
         display: flex;
         align-items: center;
         list-style: none;
+
+        #flags{
+          display: none;
+          width: auto;
+          height: 30px;
+          cursor: pointer;
+          flex-direction: column;
+        }
+        
         @media screen and (max-width: 1000px) {
           display: flex;
           flex-direction: column;
         }
+        
 
         .logo {
           height: 100px;
@@ -191,12 +201,13 @@ body {
           color: #ffffff;
           font-weight: 400;
           margin: 15px;
+          
 
           @media screen and (max-width: 1000px) {
             display: none;
             flex-direction: column;
           }
-
+          
           &:hover {
             transition: all 0.3s;
             color: #2599e6;
@@ -229,6 +240,7 @@ body {
         right: 25px;
         top: 44px;
       }
+      
 
       &::after {
         content: "";
@@ -273,6 +285,17 @@ body {
     }
   }
 }
+
+//Switch de español e ingles
+
+#flags {
+  display: block;
+  width: auto;
+  height: 30px;
+  cursor: pointer;
+}
+
+
 
 // CONTENEDOR PORTFOLIO
 
@@ -783,6 +806,11 @@ h3 {
     width: 5rem;
     height: 5rem;
   }
+}
+
+// INGLES SWITCH 
+.about-me-text .show{
+  
 }
 
 

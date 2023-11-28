@@ -98,6 +98,13 @@ body header nav ul {
   align-items: center;
   list-style: none;
 }
+body header nav ul #flags {
+  display: none;
+  width: auto;
+  height: 30px;
+  cursor: pointer;
+  flex-direction: column;
+}
 @media screen and (max-width: 1000px) {
   body header nav ul {
     display: flex;
@@ -189,6 +196,13 @@ body header .portfolio-name h1 {
 }
 body header .container-btn :nth-child(2) {
   color: #ffffff;
+}
+
+#flags {
+  display: block;
+  width: auto;
+  height: 30px;
+  cursor: pointer;
 }
 
 .portfolio-container {

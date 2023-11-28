@@ -28,14 +28,17 @@
       <nav class="navbar" id="nav">
         <ul>
           <img class="logo" src="img/logoCGc.svg" alt="Logo" />
-          <a href="#" class="links" id="nav-home">Home</a>
-          <a href="#" class="links" id="nav-projects">Proyectos</a>
-          <a href="#" class="links" id="nav-about-me">Sobre Mi</a>
-          <a href="#" class="links" id="nav-stack">Mi Stack Tecnologico</a>
+          <a href="#" class="links" id="nav-home" data-section="nav" data-value="home">Home</a>
+          <a href="#" class="links" id="nav-projects" data-section="nav" data-value="projects">Proyectos</a>
+          <a href="#" class="links" id="nav-about-me" data-section="nav" data-value="about-me">Sobre Mi</a>
+          <a href="#" class="links" id="nav-stack" data-section="nav" data-value="stack">Mi Stack Tecnologico</a>
           <button class="switch" id="switch">
             <span><i class="fa-solid fa-sun"></i></span>
             <span><i class="fa-solid fa-moon"></i></span>
           </button>
+          <img class="links" id="flags" src="./img/spanicon.svg" data-language ="es">
+          <img class="links" id="flags" src="./img/usaicon.svg" data-language ="en">
+          
         </ul>
       </nav>
     </header>
@@ -45,13 +48,13 @@
       <div class="flex-container">
         <div class="content-container">
           <div class="container-presentation">
-            <span>Hola! Mi nombre es</span>
+            <span data-section ="profile" data-value ="presentation-name">Hola! Mi nombre es</span>
           </div>
           <div class="portfolio-name">
             <h1>Christian Gonzalez</h1>
           </div>
           <div class="presentation-paragraph">
-            <p>
+            <p data-section ="profile" data-value ="presentation">
               Soy un desarrollador Front-end <span class="span-text">con ganas de aplicar mis
               conocimientos y seguir aprendiendo!</span>
             </p>
@@ -60,11 +63,12 @@
             <a
               href="./img/CV-Christian-Gonzalez- Desarrollador-Web.pdf"
               download
+              data-section ="profile" data-value ="cvBtn"
             >
               Descargar CV</a
             >
 
-            <a id="btn-mail" href="mailto:christiang14@hotmail.com.ar"
+            <a id="btn-mail" href="mailto:christiang14@hotmail.com.ar" data-section ="profile" data-value ="contactBtn"
               >Contactame Por Mail Aquí!</a
             >
           </div>
@@ -90,7 +94,7 @@
     <!-- PROYECTOS -->
 
     <div class="card-container-all" id="projects">
-      <h2>PROYECTOS</h2>
+      <h2 data-section="profile" data-value="projects-title">PROYECTOS</h2>
 
       <!-- PROYECTO CLON NIKE -->
 
@@ -98,7 +102,7 @@
         <a href="https://github.com/ChrisGlz14/Nike-Clon"target="_blank" ><img class="img-proyectos" src="./img/figmanike.png" alt="" /></a>
         <div class="card-container">
           <div class="header-container">
-            <h3>NIKE CLON</h3>
+            <h3 data-section ="projects" data-value ="project-title1">NIKE CLON</h3>
              <div class="icons">
               <a href="https://github.com/ChrisGlz14/Nike-Clon" target="_blank">
                 <i class="fa-brands fa-github"></i>
@@ -110,12 +114,12 @@
               </a> -->
             </div> 
           </div>
-          <p class="description-card">
+          <p class="description-card " data-section ="projects" data-value ="project-description1">
             Un proyecto que modificaré a mi manera y me permitirá <span class="span-text">aplicar conocimientos</span> en desarrollo web, base de datos y
              <span class="span-text">diseño</span> para llevarlo a cabo se está utilizando Tailwind, Typescrip y React. 
           </p>
           <div class="footer-card">
-            <h3>Tecnologias y Herramientas utilizadas:</h3>
+            <h3 data-section ="projects" data-value ="tecnologies1">Tecnologias y Herramientas utilizadas:</h3>
             <div class="footer-icons">
               <i class="fa-brands fa-react"></i>
               <img src="./img/typescript.svg" style="width: 28px;height: 28px;" />
@@ -133,7 +137,7 @@
         <a href="https://ancorasf.netlify.app/ "target="_blank"><img class="img-proyectos" src="./img/ancora.png" alt="" /></a>
         <div class="card-container">
           <div class="header-container">
-            <h3>ANCORA EMPRESA CONSTRUCTORA</h3>
+            <h3 data-section ="projects" data-value ="project-title2">ANCORA EMPRESA CONSTRUCTORA</h3>
             <div class="icons">
               <a href="https://github.com/ChrisGlz14/Ancora" target="_blank">
                 <i class="fa-brands fa-github"></i>
@@ -145,7 +149,7 @@
               </a>
             </div>
           </div>
-          <p class="description-card">
+          <p class="description-card" data-section ="projects" data-value ="project-description2">
             A pesar de estar en pleno desarrollo, mi experiencia como freelance
             con Ancora me permitió <span class="span-text">aplicar mis conocimientos</span> en desarrollo web y
             trabajar en estrecha <span class="span-text">colaboración con un equipo</span> para mejorar su
@@ -153,7 +157,7 @@
             como Bootstrap, HTML, CSS y JavaScript.
           </p>
           <div class="footer-card">
-            <h3>Tecnologias y Herramientas utilizadas:</h3>
+            <h3 data-section ="projects" data-value ="tecnologies2">Tecnologias y Herramientas utilizadas:</h3>
             <div class="footer-icons">
               <i class="fa-brands fa-html5"></i>
               <i class="fa-brands fa-css3-alt"></i>
@@ -169,7 +173,7 @@
         <a href="http://insidecoaching.com.ar/" target="_blank"><img class="img-proyectos" src="./img/inside-coachjign.png" alt="" /></a>
         <div class="card-container">
           <div class="header-container">
-            <h3>INSIDE COACHING</h3>
+            <h3 data-section ="projects" data-value ="project-title3">INSIDE COACHING</h3>
             <div class="icons">
               
               <a href="http://insidecoaching.com.ar/" target="_blank">
@@ -177,11 +181,11 @@
               </a>
             </div>
           </div>
-          <p class="description-card">
+          <p class="description-card" data-section ="projects" data-value ="project-description3">
             Landing page realizada para un cliente con una academia de coaching<span class="span-text">realizada en wordpress</span> y desarrollada junto el equipo de Tic's con Alas Empresa Jr, junto con mis compañeros realizamos el desarrollo UI/UX y prototipado en adobe xd y trabajamos con metodologia Scrum.
           </p>
           <div class="footer-card">
-            <h3>Tecnologias y Herramientas utilizadas:</h3>
+            <h3 data-section ="projects" data-value ="tecnologies3">Tecnologias y Herramientas utilizadas:</h3>
             <div class="footer-icons">
               <i class="fa-brands fa-html5"></i>
               <i class="fa fa-wordpress"></i>
@@ -196,7 +200,7 @@
         <a href="https://www.alasempresajunior.com.ar/" target="_blank"><img class="img-proyectos" src="./img/alas.png" alt="" /></a>
         <div class="card-container">
           <div class="header-container">
-            <h3>ALAS EMPRESA JR</h3>
+            <h3 data-section ="projects" data-value ="project-title4">ALAS EMPRESA JR</h3>
             <div class="icons">
               
               <a href="https://www.alasempresajunior.com.ar/" target="_blank">
@@ -204,11 +208,11 @@
               </a>
             </div>
           </div>
-          <p class="description-card">
+          <p class="description-card" data-section ="projects" data-value ="project-description4">
             Pagina de Alas<span class="span-text"> encargados del mantenimiento y actualizacion</span>, junto con mis compañeros realizamos actualizaciones cuando se requiera y sea necesario, además de ser los desarrolladores de empresas y pymes que quieran llevar su empresa al proximo nivel.
           </p>
           <div class="footer-card">
-            <h3>Tecnologias y Herramientas utilizadas:</h3>
+            <h3 data-section ="projects" data-value ="tecnologies4">Tecnologias y Herramientas utilizadas:</h3>
             <div class="footer-icons">
               <i class="fa-brands fa-html5"></i>
               <i class="fa fa-wordpress"></i>
@@ -224,8 +228,8 @@
       <div class="grid-container-more-projects">
         <div class="grid-project">
           <a href="https://chrisglz14.github.io/calculadora-react/" target="_blank"><img src="./img/calculadorareact.png" alt="" srcset="" /></a>
-          <h3>Calculadora React</h3>
-          <p>
+          <h3 data-section="more-projects" data-value="little-project-title1">Calculadora React</h3>
+          <p data-section="more-projects" data-value="little-project-description1">
             Calculadora utilizando React que me permitió comprender conceptos
             como 'useState'. <span class="span-text">Aprendiendo a manejar estados</span> y actualizar
             dinámicamente la interfaz de usuario en respuesta a las
@@ -248,8 +252,8 @@
 
         <div class="grid-project">
           <a href="https://chrisglz14.github.io/weather-page/" target="_blank"><img src="./img/climaApp.png" /></a>
-          <h3>Clima App</h3>
-          <p>
+          <h3 data-section="more-projects" data-value="little-project-title2">Clima App</h3>
+          <p data-section="more-projects" data-value="little-project-description2">
             Desarrolle esta aplicación de clima utilizando JavaScript. La app
             ofrece <span class="span-text">datos precisos y pronósticos actualizados</span>. A través de este
             desarrollo aprendí nuevas habilidades de desarrollo web.
@@ -271,8 +275,8 @@
 
         <div class="grid-project">
           <a href="https://chrisglz14.github.io/github-user-api/" target="_blank"><img src="./img/githubbuscador.png" /></a>
-          <h3>Buscador de Github</h3>
-          <p>
+          <h3 data-section="more-projects" data-value="little-project-title3">Buscador de Github</h3>
+          <p data-section="more-projects" data-value="little-project-description3">
             Esta app te permite descubrir perfiles de desarrolladores y
             proyectos interesantes en la comunidad GitHub, Ademas <span class="span-text">ofrece
             informacion actualizada</span> de sus repositorios.
@@ -295,8 +299,8 @@
 
         <div class="grid-project">
           <a href="https://chrisglz14.github.io/diccionario-en-ingles/" target="_blank"><img src="./img/diccionario.png" /></a>
-          <h3>Diccionario Ingles</h3>
-          <p>
+          <h3 data-section="more-projects" data-value="little-project-title4">Diccionario Ingles</h3>
+          <p data-section="more-projects" data-value="little-project-description4">
             Esta app te permite las funcionalidades de un diccionario pero en ingles <span class="span-text">utilizando el consumo de una API</span> para poder afianzar conocimientos.
           </p>
           <div class="icon-grid">
@@ -317,8 +321,8 @@
 
         <div class="grid-project">
           <a href="https://chrisglz14.github.io/2-pokeApi-Card/" target="_blank"><img src="./img/pokemonAPP.png" /></a>
-          <h3>Poke Card</h3>
-          <p>
+          <h3 data-section="more-projects" data-value="little-project-title5">Poke Card</h3>
+          <p data-section="more-projects" data-value="little-project-description5">
             Esta app te permite buscar tu pokemón favorito!! <span class="span-text">desafio de frontend mentor</span>, me encantan estos desafios!
           </p>
           <div class="icon-grid">
@@ -339,8 +343,8 @@
 
         <div class="grid-project">
           <a href="https://chrisglz14.github.io/Peliculas/" target="_blank"><img src="./img/titanic.png" /></a>
-          <h3>Buscador de Peliculas</h3>
-          <p>
+          <h3 data-section="more-projects" data-value="little-project-title6">Buscador de Peliculas</h3>
+          <p data-section="more-projects" data-value="little-project-description6">
             Esta pagina te permite buscar la pelicula que desees y<span class="span-text"> ver sus estadisticas, reseñas y puntuaciones!</span>, animate a buscar alguna!
           </p>
           <div class="icon-grid">
@@ -360,8 +364,8 @@
 
         <div class="grid-project">
           <a href="https://chrisglz14.github.io/page-of-buses-and-their-routes-santa-fe/" target="_blank"><img src="./img/colectivosSF.png"/></a>
-          <h3>Colectivos de mi Ciudad</h3>
-          <p>
+          <h3 data-section="more-projects" data-value="little-project-title7">Colectivos de mi Ciudad</h3>
+          <p data-section="more-projects" data-value="little-project-description7">
             Esta pagina la cree para mi pareja que no sabia las rutas de los colectivos <span class="span-text">es muy util ya que no existe una pagina bien estructurada de este estilo para la linea de colectivos de mi pais</span>, tal vez sirva por si estas en Santa Fe!
           </p>
           <div class="icon-grid">
@@ -382,8 +386,8 @@
 
         <div class="grid-project">
           <a href="https://chrisglz14.github.io/To-do-list/" target="_blank"><img src="./img/ToDo.png" /></a>
-          <h3>To-Do List</h3>
-          <p>
+          <h3 data-section="more-projects" data-value="little-project-title8">To-Do List</h3>
+          <p data-section="more-projects" data-value="little-project-description8">
             Este fue mi primer To-Do List, lo tengo como un recuerdo y un <span class="span-text">logro</span>, tal vez sea algo sencillo, pero ya tiene su tiempo.
           </p>
           <div class="icon-grid">
@@ -412,9 +416,9 @@
 
     <section class="about-me" id="about-me">
       <div class="about-me-title">
-        <h2>SOBRE MI</h2>
+        <h2 data-section="profile" data-value="about-me-title">SOBRE MI</h2>
       </div>
-      <div class="about-me-text">
+      <div class="about-me-text" data-section="profile" data-value="about-me">
         Me llamo Christian Gonzalez, tengo 23 años y soy oriundo de Santa Fe,
         Argentina. Actualmente estoy estudiando el desarrollo web frontend y <span class="span-text">mi
         objetivo es convertirme en un fullstack</span>, disfruto de cada aprendizaje y
@@ -429,7 +433,7 @@
 
     <section class="stack-container" id="stack">
       <div class="stack-title">
-        <h2>MI STACK</h2>
+        <h2 data-section="profile" data-value="stack-title">MI STACK</h2>
       </div>
       <div class="tecnologies-logo">
         <img src="./img/tecnologies-logo/html-1.svg" />
