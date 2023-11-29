@@ -98,17 +98,22 @@ body header nav ul {
   align-items: center;
   list-style: none;
 }
+body header nav ul .switch-lang {
+  display: flex;
+}
 body header nav ul #flags {
-  display: none;
-  width: auto;
-  height: 30px;
-  cursor: pointer;
-  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 5px 0px 5px;
+  width: 30px;
+  height: auto;
 }
 @media screen and (max-width: 1000px) {
   body header nav ul {
     display: flex;
     flex-direction: column;
+  }
+  body header nav ul #flags {
+    margin: 15px 5px 0px 5px;
   }
 }
 body header nav ul .logo {
@@ -196,13 +201,6 @@ body header .portfolio-name h1 {
 }
 body header .container-btn :nth-child(2) {
   color: #ffffff;
-}
-
-#flags {
-  display: block;
-  width: auto;
-  height: 30px;
-  cursor: pointer;
 }
 
 .portfolio-container {

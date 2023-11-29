@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
 btnMobile.addEventListener("click", () => {
   let links = document.querySelectorAll(".links");
   for (const link of links) {
@@ -51,6 +53,8 @@ btnMobile.addEventListener("click", () => {
     }
   }
 });
+
+
 
 // GO UP BTN
 

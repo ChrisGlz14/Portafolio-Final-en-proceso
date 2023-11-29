@@ -173,21 +173,27 @@ body {
         display: flex;
         align-items: center;
         list-style: none;
-
-        #flags{
-          display: none;
-          width: auto;
-          height: 30px;
-          cursor: pointer;
-          flex-direction: column;
+        
+        .switch-lang {
+          display: flex;
         }
+        #flags {
+          justify-content: space-between;
+          margin: 0px 5px 0px 5px;
+          width: 30px;
+          height: auto;
+        }
+        
         
         @media screen and (max-width: 1000px) {
           display: flex;
           flex-direction: column;
+
+          #flags {
+            margin: 15px 5px 0px 5px;
+          }
         }
         
-
         .logo {
           height: 100px;
           width: 100px;
@@ -235,6 +241,8 @@ body {
       cursor: pointer;
       display: flex;
       outline: none;
+
+      
       @media screen and (max-width: 560px) {
         position: absolute;
         right: 25px;
@@ -288,12 +296,6 @@ body {
 
 //Switch de español e ingles
 
-#flags {
-  display: block;
-  width: auto;
-  height: 30px;
-  cursor: pointer;
-}
 
 
 
@@ -806,11 +808,6 @@ h3 {
     width: 5rem;
     height: 5rem;
   }
-}
-
-// INGLES SWITCH 
-.about-me-text .show{
-  
 }
 
 
