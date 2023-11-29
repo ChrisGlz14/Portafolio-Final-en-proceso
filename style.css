@@ -101,11 +101,12 @@ body header nav ul {
 body header nav ul .switch-lang {
   display: flex;
 }
-body header nav ul #flags {
+body header nav ul .switch-lang #flags {
   justify-content: space-between;
   margin: 0px 5px 0px 5px;
   width: 30px;
   height: auto;
+  cursor: pointer;
 }
 @media screen and (max-width: 1000px) {
   body header nav ul {
@@ -412,11 +413,12 @@ body.dark .card-container-all h2 {
 .icons i {
   transition: all 0.1s;
   margin: 8px;
-  color: #a63929;
+  color: rgb(17, 144, 182);
+  scale: 1.1;
 }
 .icons :hover {
-  color: #a83737;
-  scale: 1.05;
+  color: rgb(104, 176, 235);
+  scale: 1.2;
 }
 
 .footer-card {
@@ -574,7 +576,7 @@ body.dark .more-projects .grid-container-more-projects .grid-project .icon-grid 
 .more-projects .grid-container-more-projects .grid-project .icons-grid i {
   transition: all 0.1s;
   margin: 8px;
-  color: #a63929;
+  color: rgb(17, 144, 182);
 }
 .more-projects .grid-container-more-projects .grid-project .icons-grid :hover {
   color: #a83737;
